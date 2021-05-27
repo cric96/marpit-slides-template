@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: '14'
       - name: Compile marpit pdf
-        run: npx @marp-team/marp-cli ${{ steps.infile.outputs.name }} -o ./output.pdf 
+        run: npx @marp-team/marp-cli ${{ steps.infile.outputs.name }} -o ./output.pdf --allow-local-files
       - name: Compile marpit html
-        run: npx @marp-team/marp-cli ${{ steps.infile.outputs.name }} -o ./public/index.html ## change here
+        run: npx @marp-team/marp-cli ${{ steps.infile.outputs.name }} -o ./index.html ## change here
       - name: Autotag
         uses: DanySK/semver-autotag-action@master
       - name: Fetch tags
@@ -40,4 +40,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./
