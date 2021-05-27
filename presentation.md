@@ -37,7 +37,7 @@ footer: 'Gianluca Aguzzi, 2021'
 * wordy sentence
 * wof wof
 ---
-# Code (always fun :))
+# Code (always fun 😄)
 ```
 trait ScalaSentence {
     def ? : ScalaSentence = this
@@ -86,10 +86,67 @@ WhyScala.?.because.it.is.magic()
 
 ---
 <!-- class : invert -->
-# Change class
+# Change class : 😁
 ---
 <!-- 
 footer: 'Change footer here'
 class: normal
 -->
-# Why not theme? :)
+# Multiple changes :D
+
+---
+<!-- class : invert -->
+# Change background
+![bg](images/three.jpg)
+
+---
+
+# More
+# Option
+![bg](images/one.jpg)
+![bg](images/two.jpeg)
+![bg](images/three.jpg)
+
+---
+<!-- 
+class : normal 
+footer: 'Gianluca Aguzzi 2021'
+-->
+
+# And more
+![bg vertical](images/one.jpg)
+![bg](images/two.jpeg)
+![bg](images/three.jpg)
+
+---
+![bg left](images/two.jpeg)
+
+# Left aling
+
+---
+![bg right](images/two.jpeg)
+![bg right](images/one.jpg)
+
+#### Right with multiple images aling
+---
+# Maths is always good
+
+Render inline math such as $ax^2+bc+c$.
+
+$$ I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx $$
+
+$$
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+---
+<style scoped>
+h1 {
+  color: blue;
+}
+</style>
+
+# Some css :))
+
+## Enjoy :smile:
