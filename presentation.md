@@ -1,62 +1,95 @@
 ---
 marp : true
-title : MVC Meets Monads
+title : Marpit repo template
 theme: uncover
-class:
-  - minimal
 paginate: true
 footer: 'Gianluca Aguzzi, 2021'
 ---
 
-# Model View Controller meets Monad
-
---- 
-> # *It is all about composition*
-
----
-# Goals
-- show an end-to-end **functional** application
-- leverage some well-consolidated functional library
-- understandar limations (if any) and the improvement
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
 
 ---
-# **Task**
-> Task represents a specification for a possibly lazy or asynchronous computation, which when executed will produce an A as a result, along with possible side-effects.
+# Fonts  
+*Italic*
+**Bold**
+
 ---
-## What does it refer you to?
+### Ordered lists
+1. first
+2. second 
+3. third
+### Fragmented
+1) first
+2) second 
+3) third
+
+- - -
+### Unordered lists
+- something fun
+- wordy sentence
+- wof wof
+### Fragmented
+* something fun
+* wordy sentence
+* wof wof
+---
+# Code (always fun :))
 ```
-trait Task[+A] {
-    final def flatMap[B](f: A => Task[B]): Task[B] = ...
-    final def map[B](f : A => B): Task[B] = ...
-    //some interesting extesions
-    def memoize: Task[A] = ...
+trait ScalaSentence {
+    def ? : ScalaSentence = this
+    def because : ScalaSentence = this
+    def it : ScalaSentence = this
+    def is : ScalaSentence = this
+    def magic() : Unit = println("Yummy")
 }
-object Task {
-    def pure[A](a : A) : Task[A]
-    def defer[A](a : Task[A]) : Task[A]
-}
+object WhyScala extends ScalaSentence
+WhyScala.?.because.it.is.magic()
 ```
 ---
-## A Little taste
-```
-object App extends TaskApp {
-    def 
-}
-```
----
-# **Observable**
->  a data type for modeling and processing asynchronous and reactive streaming of events with non-blocking back-pressure.
-
-We use it to implements the [Functional Reactive Programming](http://wiki.haskell.org/Functional_Reactive_Programming)
+# Links
+[A good book](https://springframework.guru/gang-of-four-design-patterns/)
 
 ---
-# Books
 
-1) **[Scala with Cats Book](https://underscore.io/books/scala-with-cats/)**
-2) **[Category Theory for Programmers](https://github.com/hmemcpy/milewski-ctfp-pdf)**
-3) **[Functional Reactive Programming](https://www.manning.com/books/functional-reactive-programming)**
+# Table
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+[Markdown table examples](https://www.markdownguide.org/extended-syntax/)
+
 ---
-# References
-```
+# Citations
+> Sometimes it is the people no one can imagine anything of who do the things no one can imagine.
+- Alan Turing
+---
+# Basic images
+![w:150 h:150](./images/one.jpg)
+![h:150](./images/one.jpg)
 
-```
+---
+# Basic filters
+| | | | |
+| - | - | - | - |
+| ![w:50 h:50 blur](./images/one.jpg) | ![w:50 h:50 brightness](./images/one.jpg) | ![w:50 h:50 contrast](./images/one.jpg) | ![w:50 h:50 contrast](./images/one.jpg) |
+| ![w:50 h:50 drop-shadow](./images/one.jpg) | ![w:50 h:50 grayscale](./images/one.jpg) | ![w:50 h:50 hue-rotate](./images/one.jpg) | ![w:50 h:50 invert](./images/one.jpg) |
+| ![w:50 h:50 opacity](./images/one.jpg) | ![w:50 h:50 saturate](./images/one.jpg) | ![w:50 h:50 sepia](./images/one.jpg) | ![w:50 h:50](./images/one.jpg) |
+
+---
+# Marpit directive
+## Fit entirly<!-- fit -->
+
+---
+<!-- class : invert -->
+# Change class
+---
+<!-- 
+footer: 'Change footer here'
+class: normal
+-->
+# Why not theme? :)
